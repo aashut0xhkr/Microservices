@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name="User")
 @Data
@@ -17,4 +20,7 @@ public class User {
     private String name;
     private String email;
     private String about;
+
+    @Transient
+    private List<Rating> ratings=new ArrayList<>();
 }
