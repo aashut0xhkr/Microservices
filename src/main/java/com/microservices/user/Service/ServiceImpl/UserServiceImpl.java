@@ -15,19 +15,24 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepo userRepo;
 
+    @Override
     public User createUser(User user){
         return userRepo.save(user);
     }
+    @Override
     public List<User> getUser(){
         return userRepo.findAll();
     }
+    @Override
     public User getUserById(Long UserID){
         return userRepo.findById(UserID).orElseThrow(()->new CustomException("USer not found"));
     }
+    @Override
     public void DeleteUserById(Long UserID){
         userRepo.findById(UserID).orElseThrow(()->new CustomException("USer not found"));
         userRepo.deleteById(UserID);
     }
+    @Override
     public User UpdateUser(Long UserID,User user){
         User userById = getUserById(UserID);
         if(userById==null) return null;
