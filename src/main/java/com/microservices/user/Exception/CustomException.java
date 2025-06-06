@@ -1,4 +1,4 @@
-package com.microservices.user.Service.ServiceImpl;
+package com.microservices.user.Exception;
 
 public class CustomException extends RuntimeException  {
     public CustomException(String msg) {
@@ -7,3 +7,4 @@ public class CustomException extends RuntimeException  {
 
     }
 }
+

@@ -1,6 +1,7 @@
 package com.microservices.user.Service.ServiceImpl;
 
 import com.microservices.user.Entity.User;
+import com.microservices.user.Exception.CustomException;
 import com.microservices.user.Repository.UserRepo;
 import com.microservices.user.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
